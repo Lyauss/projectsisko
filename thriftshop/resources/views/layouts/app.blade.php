@@ -704,7 +704,7 @@
         </div>
     </section>
     <!-- Blog Section End -->
-
+</div> <!-- div untuk #controller -->
     <!-- Footer Section Begin -->
     <footer class="footer spad">
         <div class="container">
