@@ -300,8 +300,8 @@
                     </div>
                 </div>
                 <div class="flex-container">
-                    <div class="row" v-for="data in datas">
-                        <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="row-2" v-for="data in datas">
+                        <div class="col-3">
                             <div class="featured__item">
                                 <div class="featured__item__pic" :style='{backgroundImage: `url(${ data.photo })`}'>
                                     <ul class="featured__item__pic__hover">
