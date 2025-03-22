@@ -299,9 +299,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex-container">
-                    <div class="row-2" v-for="data in datas">
-                        <div class="col-3">
+                <div class="container" >
+                    <div class="row" >
+                        <div class="col-3" v-for="data in datas">
                             <div class="featured__item">
                                 <div class="featured__item__pic" :style='{backgroundImage: `url(${ data.photo })`}'>
                                     <ul class="featured__item__pic__hover">
@@ -429,7 +429,7 @@
                             </div>
                         </div> --}}
                     </div>
-                </div>
+                {{-- </div> --}}
             </div>
         </section>
         <!-- Featured Section End -->

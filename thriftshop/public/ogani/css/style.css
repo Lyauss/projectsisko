@@ -113,6 +113,7 @@ ol {
 
 .flex-container {
 	display: flex;
+	flex-direction:2 row;
 	justify-content: space-between;
   }
 
@@ -140,6 +141,8 @@ ol {
 }
 
 .set-bg {
+	width:400px;
+	height: 400px;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: top center;
