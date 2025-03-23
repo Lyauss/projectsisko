@@ -230,13 +230,6 @@
             </div>
         </section>
         <!-- Hero Section End -->
-        {{-- <p style="text-align: center">tulisanya disini</p>
-       
-            <div v-for="data in datas">
-                <p>@{{ data.name }}</p>
-    
-            </div> --}}
-        
         
         <!-- Categories Section Begin -->
         <section class="categories">
@@ -291,8 +284,11 @@
                         <div class="featured__controls">
                             <ul>
                                 <li class="active" >All</li>
-                                <li >Tas</li>
-                                <li data-filter=".baju">Baju</li>
+                                <li data-filter=".tas">Tas</li>
+                                <li data-filter=".bajusatu">Baju Satu</li>
+                                <li data-filter=".bajudua">Baju Dua</li>
+                                <li data-filter=".bajutiga">Baju Tiga</li>
+                                <li data-filter=".bajuempat">Baju Empat</li>
                                 <li data-filter=".hijab">Hijab</li>
                                 <li data-filter=".lulur">Lulur</li>
                             </ul>
@@ -300,8 +296,9 @@
                     </div>
                 </div>
                 <div class="container" >
-                    <div class="row" >
-                        <div class="col-3" v-for="data in datas">
+                    <div class="row featured_filter" >
+                        <div class="col-3 mix" :class="[trimName(data.name)]" v-for="data in datas">
+                        {{-- <div class="col-3 " v-for="data in datas"> --}}
                             <div class="featured__item">
                                 <div class="featured__item__pic" :style='{backgroundImage: `url(${ data.photo })`}'>
                                     <ul class="featured__item__pic__hover">
@@ -312,6 +309,7 @@
                                 </div>
                                 <div class="featured__item__text">
                                     <h6><a href="#">@{{ data.name }}</a></h6>
+                                    {{-- <h5>@{{ trimName(data.name) }}</h5> --}}
                                     <h5>@{{ data.price }}</h5>
                                 </div>
                             </div>
@@ -886,16 +884,10 @@
                             console.log(this.datas);
                         })
                         .catch(err => console.log(err))
-                }
-                // getApi() {
-                //     axios
-                //         .get(this.apiUrl)
-                //         .then(response => {
-                //             this.datas = response.data.products;
-                //             console.log(this.datas);
-                //         })
-                //         .catch(err => console.log(err))
-                // }
+                },
+                trimName(x) {
+                     return x.toLowerCase().replace(/ /g,'').replace(/[0-9]/g, '');
+                 }
             },
         });
     </script>
